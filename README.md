@@ -16,7 +16,7 @@ Projeto criado com objetivo de criar um portfólio, testar domínios personaliza
 
 ## Responsividade:
 
-- O design é responsivo e se adapta a tamanhos de tela diferentes com uma reorganização dos elementos, e está em fase de aperfeiçoamentos.
+- O design é responsivo, se adapta a tamanhos de tela diferentes com uma reorganização dos elementos, e está em fase de aperfeiçoamentos.
 
 ## Tecnologias Utilizadas
 
