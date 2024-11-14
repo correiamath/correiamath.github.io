@@ -5,7 +5,7 @@ const userRoutes = require("./routes/userRoutes"); // Importando as rotas de usu
 const app = express();
 
 // Servir arquivos estáticos da pasta 'public'
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "../")));
 
 // Usando as rotas de usuários
 app.use("/api", userRoutes); // Todas as rotas de users estarão sob o prefixo /api
