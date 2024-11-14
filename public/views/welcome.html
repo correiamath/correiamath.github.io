@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Teste</title>
+    <style>
+      /* CSS incorporado */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      p {
+        color: #666;
+      }
+
+      #botao {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      #botao:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Recuperar senha</h1>
+      <p>Para recuperar sua senha clique em continuar.</p>
+      <button id="botao" onclick="mudarCor()">Continuar</button>
+    </div>
+
+    <script>
+      // JavaScript incorporado
+      function mudarCor() {
+        const botao = document.getElementById("botao");
+        const cores = ["#4CAF50", "#2196F3", "#FF5722", "#9C27B0"];
+        botao.style.backgroundColor =
+          cores[Math.floor(Math.random() * cores.length)];
+      }
+    </script>
+  </body>
+</html>
