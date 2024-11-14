@@ -1,19 +1,15 @@
-// public/js/script.js
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Previne o envio do formulário para validação
 
-function login() {
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  const messageElement = document.getElementById("message");
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
 
-  if (username === "usuario" && password === "senha123") {
-    messageElement.style.color = "green";
-    messageElement.textContent = "Login bem-sucedido! Redirecionando...";
-    // Aqui você poderia redirecionar o usuário para outra página
-    setTimeout(() => {
-      window.location.href = "/home"; // Substitua "/home" pelo seu caminho desejado
-    }, 2000);
-  } else {
-    messageElement.style.color = "red";
-    messageElement.textContent = "Usuário ou senha incorretos.";
-  }
-}
+    if (username && password) {
+      alert("Login bem-sucedido!");
+      // Aqui você pode fazer a validação no backend ou redirecionamento
+    } else {
+      alert("Por favor, preencha todos os campos.");
+    }
+  });
