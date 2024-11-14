@@ -6,18 +6,17 @@ const connection = require("./db");
 const app = express();
 const PORT = 3000;
 
-// Definir a pasta de views (arquivos HTML)
-app.set("views", path.join(__dirname, "views"));
-
 // Configurar o middleware para processar o corpo das requisições
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Servir arquivos estáticos da pasta "public" (CSS, JS, etc.)
 app.use(express.static(path.join(__dirname, "public")));
 
-// Rota para a página de login
+// Rota para a página de login - Serve o arquivo index.html da raiz
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html")); // Alterado para servir de views
+  const indexPath = path.join(__dirname, "..", "index.html"); // Corrige o caminho para a raiz
+  console.log("Caminho para o index.html:", indexPath);
+  res.sendFile(indexPath); // Serve o arquivo index.html
 });
 
 // Rota de autenticação (POST)
