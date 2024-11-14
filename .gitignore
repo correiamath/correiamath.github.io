@@ -1,0 +1,11 @@
+# Node modules
+/node_modules/
+
+# Ambiente de produção
+/.env
+
+# Banco de dados local
+*.sqlite
+
+# Logs
+logs/
